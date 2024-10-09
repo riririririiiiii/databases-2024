@@ -44,7 +44,7 @@ from Boxes
 where value > 150;
 
 --6
-select distinct contents
+select distinct on (contents)*
     from Boxes;
 
 --7
