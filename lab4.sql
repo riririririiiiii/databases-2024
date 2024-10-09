@@ -9,7 +9,7 @@ create table Warehouses(
 );
 
 create table Boxes(
-  code varchar(4),
+  code char(4),
   contents varchar(255),
   value real,
   warehouse integer
@@ -66,9 +66,9 @@ insert into Boxes values ('H5RT', 'Papers', 200,2);
 
 --11
 update Boxes
-set value = value * 0.85
-where code = (
-    select code
+set value=value*0.85
+where value=(
+    select value
     from Boxes
     order by value desc
     limit 1 offset 2
