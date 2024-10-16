@@ -3,12 +3,11 @@ create database lab5;
 
 --2
 create table customers(
-    customer_id int,
+    customer_id int primary key,
     cust_name varchar(100),
     city varchar(100),
     grade int,
     salesman_id int,
-    primary key(customer_id, salesman_id),
     foreign key (salesman_id) references  salesmen(salesman_id)
 );
 
@@ -18,7 +17,7 @@ create table orders(
     ord_date date,
     customer_id int,
     salesman_id int,
-    foreign key (customer_id, salesman_id) references customers(customer_id, salesman_id),
+    foreign key (customer_id) references customers(customer_id),
     foreign key (salesman_id) references salesmen(salesman_id)
 );
 
