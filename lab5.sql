@@ -84,7 +84,7 @@ where customer_id in (select customer_id
                       where city = 'New York');
 
 --9
-select distinct*
+select *
 from customers
 where customer_id in ( select customer_id
                        from orders
