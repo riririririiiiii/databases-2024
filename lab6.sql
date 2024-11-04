@@ -76,8 +76,8 @@ left join departments d on e.department_id = d.department_id
 left join locations l on d.location_id = l.location_id;
 
 --6
-select * from departments d
-left join employees e on d.department_id = e.department_id;
+select d.department_name, e.first_name, e.last_name from departments d
+right join employees e on d.department_id = e.department_id;
 
 --7
 select first_name, last_name, e.department_id, d.department_name
