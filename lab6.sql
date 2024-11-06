@@ -60,8 +60,7 @@ VALUES
 --3
 select first_name, last_name,e.department_id, d.department_name
 from employees e
-left join
-    departments d on e.department_id = d.department_id;
+join departments d on e.department_id = d.department_id;
 
 --4
 select first_name, last_name, e.department_id, d.department_name
@@ -72,12 +71,12 @@ where e.department_id = 80 or e.department_id = 40;
 --5
 select first_name, last_name, d.department_name, l.city, l.state_province
 from employees e
-left join departments d on e.department_id = d.department_id
-left join locations l on d.location_id = l.location_id;
+    join departments d on e.department_id = d.department_id
+    join locations l on d.location_id = l.location_id;
 
 --6
 select d.department_name, e.first_name, e.last_name from departments d
-right join employees e on d.department_id = e.department_id;
+left join employees e on d.department_id = e.department_id;
 
 --7
 select first_name, last_name, e.department_id, d.department_name
