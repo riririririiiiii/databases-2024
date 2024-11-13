@@ -60,5 +60,6 @@ select * from employees e
          where d.budget > value2 and e.salary < value2;
 
 
-create index employees_salary_index on employees(department_id, salary);
-create index department_budget_index on departments(department_id, budget);
+create index employees_department_id_index on employees(department_id);
+create index employees_salary_index on employees(salary);
+create index department_budget_index on departments(budget);
