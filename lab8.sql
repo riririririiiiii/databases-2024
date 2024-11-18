@@ -79,8 +79,6 @@ WHERE grade = (SELECT MAX(grade) FROM customers);
 
 GRANT SELECT ON highest_grade_customers_view TO junior_dev;
 
---select * from cust_high_grade_view;
-
 --7
 CREATE OR REPLACE VIEW num_salesman_view AS
     SELECT city, count(*) as num_of_salesmen
